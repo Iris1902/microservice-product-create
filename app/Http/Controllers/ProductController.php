@@ -14,6 +14,7 @@ class ProductController extends Controller
             'description' => 'nullable|string',
             'price' => 'required|numeric|min:0',
             'stock' => 'required|integer|min:0',
+            'image_url' => 'nullable|url',
         ]);
 
         $product = Product::create($validated);
