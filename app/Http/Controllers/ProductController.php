@@ -21,4 +21,10 @@ class ProductController extends Controller
 
         return response()->json(['message' => 'Product created', 'data' => $product], 201);
     }
+
+    // Health check endpoint
+    public function healthCheck()
+    {
+        return response()->json(['status' => 'ok', 'message' => 'Service is running']);
+    }
 }
